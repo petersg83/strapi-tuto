@@ -16,9 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.DEPLOY_URL
-          ? "https://agile-woodland-84358.herokuapp.com"
-          : "http://localhost:1337",
+        apiURL: "https://agile-woodland-84358.herokuapp.com",
         contentTypes: [`article`, `user`],
         queryLimit: 1000,
       },

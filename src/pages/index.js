@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from "react-markdown"
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 
@@ -13,7 +14,7 @@ const IndexPage = ({ data }) => (
           <h2>
             <Link to={`/${document.node.id}`}>{document.node.title}</Link>
           </h2>
-          <p>{document.node.content}</p>
+          <ReactMarkdown source={document.node.content} />
         </li>
       ))}
     </ul>
